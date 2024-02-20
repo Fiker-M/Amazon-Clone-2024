@@ -19,8 +19,8 @@ function Auth() {
 
   const [{user }, dispatch] = useContext(DataContext)
   const navigate = useNavigate()
-  const navSateData = useLocation()
-  console.log(navSateData)
+  const navStateData = useLocation()
+  console.log(navStateData)
 
 
   // console.log(user);
@@ -77,7 +77,7 @@ createUserWithEmailAndPassword(auth, email, password).then((userInfo)=>{
     <div className={classes.login__container}>
       <h1>Sign In</h1>
 
-      {navSateData?.state?.msg && (
+      {navStateData?.state?.msg && (
           <small 
           style={{
             padding: "5px",
@@ -86,7 +86,7 @@ createUserWithEmailAndPassword(auth, email, password).then((userInfo)=>{
             fontWeight: "bold",
           }}
 >
-{navSateData.state.msg}
+{navStateData.state.msg}
 </small>
       )}
 
